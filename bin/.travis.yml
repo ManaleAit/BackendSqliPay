@@ -1,0 +1,16 @@
+language: java
+jdk:
+  - openjdk8
+before_install:
+  - chmod +x mvnw
+script: ./mvnw clean install
+jobs:
+  include:
+    - stage: "Tests"               
+      name: "Unit Tests"           
+      script: ./mvnw test
+notifications:
+  email: manalensa20@gmail.com
+
+  
+ 
